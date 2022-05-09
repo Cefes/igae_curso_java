@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lab01/lab01.iml" filepath="$PROJECT_DIR$/lab01/lab01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab02/lab02.iml" filepath="$PROJECT_DIR$/lab02/lab02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab03/lab03.iml" filepath="$PROJECT_DIR$/lab03/lab03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab04/lab04.iml" filepath="$PROJECT_DIR$/lab04/lab04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab05/lab05.iml" filepath="$PROJECT_DIR$/lab05/lab05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab06/lab06.iml" filepath="$PROJECT_DIR$/lab06/lab06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab07/lab07.iml" filepath="$PROJECT_DIR$/lab07/lab07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab07/lab07.modulo_dominio/lab07-dominio.iml" filepath="$PROJECT_DIR$/lab07/lab07.modulo_dominio/lab07-dominio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab07/lab07.modulo_negocio/lab07-negocio.iml" filepath="$PROJECT_DIR$/lab07/lab07.modulo_negocio/lab07-negocio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab07/lab07.modulo_validaciones/lab07-validaciones.iml" filepath="$PROJECT_DIR$/lab07/lab07.modulo_validaciones/lab07-validaciones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab07/lab07.modulo_dominio/lab07.modulo_dominio.iml" filepath="$PROJECT_DIR$/lab07/lab07.modulo_dominio/lab07.modulo_dominio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab07/lab07.modulo_validaciones/lab07.modulo_validaciones.iml" filepath="$PROJECT_DIR$/lab07/lab07.modulo_validaciones/lab07.modulo_validaciones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab07/lab07_modulo_dominio/lab07_modulo_dominio.iml" filepath="$PROJECT_DIR$/lab07/lab07_modulo_dominio/lab07_modulo_dominio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab07/lab07_modulo_validaciones/lab07_modulo_validaciones.iml" filepath="$PROJECT_DIR$/lab07/lab07_modulo_validaciones/lab07_modulo_validaciones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab08/lab08.iml" filepath="$PROJECT_DIR$/lab08/lab08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab09/lab09.iml" filepath="$PROJECT_DIR$/lab09/lab09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab07/practica09.modulo_ejbCalculos/practica09.modulo_ejbCalculos.iml" filepath="$PROJECT_DIR$/lab07/practica09.modulo_ejbCalculos/practica09.modulo_ejbCalculos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab07/practica09.modulo_ejbInformes/practica09.modulo_ejbInformes.iml" filepath="$PROJECT_DIR$/lab07/practica09.modulo_ejbInformes/practica09.modulo_ejbInformes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab07/practica09.modulo_warAdmin/practica09.modulo_warAdmin.iml" filepath="$PROJECT_DIR$/lab07/practica09.modulo_warAdmin/practica09.modulo_warAdmin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab07/practica09.modulo_warEmpleados/practica09.modulo_warEmpleados.iml" filepath="$PROJECT_DIR$/lab07/practica09.modulo_warEmpleados/practica09.modulo_warEmpleados.iml" />
+    </modules>
+  </component>
+</project>

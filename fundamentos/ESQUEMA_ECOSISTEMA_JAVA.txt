@@ -1,0 +1,94 @@
+Ecosistema Java SE --> Infraestructura Ejecución + Lenguaje + Herramientas/Librerias de terceros 
+
+1.- Infraestructura
+
+	a) Construccion (JDK)=conjunto de utilidades como el compilador, depurador,generacion de codigo,...
+
+				javac (compilador)
+				java (interprete)
+				jshell (interprete ReadEvaluatePrintLoop - REPL de comandos interactivo). A partir de Java9
+				javadoc (generacion de documentacion html a partir de los fuentes)
+				jar (empaquetar clases compiladas, a veces con algun fichero mas como xml, etc)
+				jarsigner (firmar y verificar ficheros jar)
+				keytool (criptografia)
+				wsimport (generacion de clases automaticas para los clientes de web services de tipo SOAP)
+				xjc (compilador que genera clases java a partir de un XSD)
+				rmic (compilador que genera clases java, stubs en cliente y skeletons en servidor, para su comunicacion C/S en programacion distribuida)
+				rmiregistry (servicio de nombres para registrar objetos distribuidos)
+				javap (desensamblador de ficheros .class)
+				jdb (depurador)
+				jdeps (analizador de dependencias, de clases o de paquetes)
+				jmc y jconsole (herramientas de monitorizacion de la JVM)
+
+	b) Ejecucion (JRE)=interprete(maquina virtual java) + librerias de clases BASE (rt.jar)
+
+				* java (interprete). NOTA: Existe una variable de entorno llamada CLASSPATH que le sirve a la maquina virtual para localizar y cargar clases que se usen en tu programa (y que no sean las tuyas propias, ni las del fichero rt.jar).
+				En realidad se manejan tres "classpath" (ver concepto de ClassLoader dentro de la JRE)
+
+						1) Variable entorno CLASSPATH
+						2) Property que estableces cuando se llama al interprete
+							(Ej java -classpath /.../.../lib.jar )
+						3) En el fichero Manifest.mf existe un "campo" llamado Class-Path:ruta(s) (dentro de un fichero .jar)
+
+				* Threads o Hilos. Son los recursos encargados de que los distintos metodos se ejecuten.
+					Existen unos predefinidos, pero tambien podríamos crear nuestros propios Threads (en web no es normal)
+					(NOTA: Metodo --> es algo pasivo y Thread es algo activo)
+					Un hilo predefinido muy importante sería el Recoletor de Basura (GC)
+
+2.- Lenguaje (orientado a objetos --> conceptos: clase, objeto/encapsulacion, herencia, sobrecarga y polimorfismo/ligadura dinamica)
+
+	Elementos de programacion BASICOS
+
+		a) Clases (atributos de datos, metodos y atributos de relacion).
+			 Modificadores principales: final, static, abstract, protected, private, public, native, volatile, transient, synchronized, default
+		b) Paquetes (organizar a las clases). Tenemos que importarlos si queremos usar las clases de ese paquete salvo las que están en el paqueta java.lang (NOTA: los paquetes en java se organizan fisicamente dentro del jar en carpetas/directorios)
+		c) Interfaces (definicion funcional pura --> sin codigo, por lo menos hasta la version 1.7)
+		d) Enum
+		e) Anotaciones
+
+	API (conjunto de clases que vienen predefinidas)
+
+		a) Colecciones (Arrays, Listas, ...)
+		b) Excepciones/Errores
+		c) Hilos de Ejecución (base de Java para la ejecución del codigo)
+		d) Programacion de red (bajo nivel) --> Socket/ServerSocket (tratamiento de TCP/IP)
+		e) Programacion de red (alto nivel) --> RMI (programacion distribuida o cliente/servidor o llamada a metodos remotos)
+		f) Persistencia de bajo nivel (JDBC) --> Guardar/Recuperar/Borrar ... info de la BBDD relacional
+		g) Interface Graficos de Usuario (Awt, JFC/Swing)
+		h) Logging
+		i) Soporte XML (JAXP --> SAX,DOM,StaX,TrAX)
+		j) Reflection (capacidad de acceder a los metadatos (clase,atributos,metodos) de un objeto en tiempo de ejecucion)
+
+	Novedades (version 1.5, 1.6, 1.7, 1.8, 1.9, ...)
+
+		a) Streams (funciones map,filter,etc)
+		b) Expresiones Lambda
+		c) Optional y tipos de @FunctionalInterface (Function, Predicate,...)
+		d) java.time
+		e) Default Methods (en interfaces)
+		f) Modules (fichero module-info.java --> dependencias, servicios que ofrece, que consume, etc)
+
+Añadido al ecosistema de Java —> JEE
+
+3.- Herramientas/Librerias de terceros
+
+	Herramientas
+
+	a) IDE's (Entornos/Editores de desarrollo). Ej. Eclipse, IntelliJ, Netbeans, ...
+	b) Automatizacion del desarrollo. Ej. Ant (build.xml), Maven (pom.xml), Gradle (build.gradle en Groovy or Kotlin DSL) ,
+		 Ivy (extension de Ant para gestion de dependencias), Jenkins (integracion continua)...
+	c) JDK's (OpenJDK, Amazon Corretto, IBM JDK, ...)
+
+	Librerias/Frameworks
+
+	a) iText,PDFBox --> Generacion de PDF's
+	b) BouncyCastle --> Criptografia
+	c) Log4j, Logback, SLF4J,... --> Logging
+	d) Xerces, Xalan, Woodstox y Apache FOP --> Parsers XML y Procesors XSL
+	e) JUnit+Mockito y JMeter --> Pruebas unitarias y de carga
+	f) Apache Commons (lang,dbcp,crypto,fileupload,io,codec,etc) y Guava de Google --> Proposito general
+	g) Apache HttpComponents (HttpClient) --> Peticiones http a bajo nivel (En Java 11 ya existe un equivalente en java.net.http.HttpClient)
+	h) Gson y Jackson --> manejo de información en formato JSON
+	i) Apache POI --> manejo de documentos de Office
+	j) Apache Tika. Deteccion y extraccion de contenido de multitud de formatos
+	k) Pentaho Kettle --> ETL para extraccion de información, transformación y carga de ficheros
