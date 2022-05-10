@@ -7,4 +7,10 @@
   </parent>
   <artifactId>lab07-dominio</artifactId>
   <packaging>jar</packaging>
+  <!--
+    Que en el padre tengamos la etiqueta dependencyManagement nos permite
+    en los hijos heredar las dependencias que queramos
+
+    En este caso como no vemos etiqueta dependencies no estamos heredando NADA !!!
+  -->
 </project>

@@ -23,6 +23,6 @@ import java.lang.annotation.Target;
 //			 	 CLASS la anotacion estar� en el fichero java y luego en el .class del disco (pero no cuando este se cargue en memoria)
 //				 SOURCE la anotacion solo estar� en el fichero java
 @Retention(value=RetentionPolicy.RUNTIME) 
-public @interface Guardable {
+public @interface Entity {
 
 }

@@ -1,8 +1,8 @@
 package org.igae.lab08.modelo;
 
-import org.igae.lab08.anotaciones.Guardable;
+import org.igae.lab08.anotaciones.Entity;
 
-@Guardable
+@Entity
 public class Departamento {
 	
 	private int numeroEmpleados;

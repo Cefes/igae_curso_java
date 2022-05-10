@@ -22,4 +22,9 @@
           </dependency>
       </dependencies>
     </dependencyManagement>
+    <dependencies>
+        <!--
+            Estas dependencias las tendran los hijos SI o SI
+        -->
+    </dependencies>
 </project>

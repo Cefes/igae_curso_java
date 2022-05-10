@@ -1,48 +1,18 @@
 package org.igae.lab08;
 
-public class App2 {
+import org.igae.lab08.espia.Espia;
+import org.igae.lab08.modelo.Empleado;
 
-	public static void espiar(Object objeto){
-		System.out.println("Informe de las caras/tipos por los que puede pasar objeto");
-		System.out.println("---------------------------------------------------------");
-		
-		Class clase;
-		
-		clase = objeto.getClass();
-		
-		System.out.println(clase.getName());
-		
-		Class[] interfaces = clase.getInterfaces();
-		
-		for (Class interfase : interfaces) {
-			System.out.println(interfase.getName());
-			// ahora obtenemos los superinterfaces que puediera tener cada uno de ellos
-			Class superInterface = interfase.getSuperclass();
-			while(superInterface != null){
-				System.out.println(superInterface.getName());
-				superInterface = superInterface.getSuperclass();
-			}
-		}
-		
-		clase = clase.getSuperclass();
-		
-		while(clase != null){
-			System.out.println(clase.getName());
-			
-			interfaces = clase.getInterfaces();
-			
-			for (Class interfase : interfaces) {
-				System.out.println(interfase.getName());
-				// ahora obtenemos los superinterfaces que puediera tener cada uno de ellos
-				Class superInterface = interfase.getSuperclass();
-				while(superInterface != null){
-					System.out.println(superInterface.getName());
-					superInterface = superInterface.getSuperclass();
-				}
-			}
-			clase = clase.getSuperclass();
-		}
-	}
-	
-	
+import java.util.ArrayList;
+
+public class App2 {
+    public static void main(String[] args) {
+        // La funcion espiar(Object objeto) de la clase Espia recibe un Object como parametro
+        // En Java tenemos un API llamada Reflection para poder obtener en tiempo de ejecucion todos los "metadatos" de un objeto
+        Empleado e1 = new Empleado(30,"pepe");
+        ArrayList<String> lista1 = new ArrayList<>();
+        // Como el parametro de entrada es de tipo Object se produce un up-casting
+        // En java el up-casting siempre es implicito --> no hay que hacer nada
+        Espia.espiar(lista1);
+    }
 }
