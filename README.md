@@ -35,3 +35,4 @@ FUNDAMENTOS JAVA
 * Sesion 2 (https://vimeo.com/701176410)
 * Sesion 3 (https://vimeo.com/701599115)
 * Sesion 4 (https://vimeo.com/701955246)
+* Sesion 5 (https://vimeo.com/708162602)
