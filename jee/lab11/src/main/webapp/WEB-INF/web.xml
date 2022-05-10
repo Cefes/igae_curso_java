@@ -1,0 +1,46 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+  <display-name>Practica1.Componentes Web Servlets</display-name>
+  
+  	<context-param>
+  		<param-name>rutaTemplatesPDF</param-name>
+  		<param-value>/var/app/nominas/templates</param-value>
+  		<description>ruta donde almacenar las plantillas para los PDF</description>
+  	</context-param>
+  	
+  	<filter>
+ 		 <filter-name>AuditoriaFilter</filter-name>
+ 		 <filter-class>org.igae.lab11.servlets.filters.AuditoriaFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+ 		<filter-name>AuditoriaFilter</filter-name>
+  		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>ServletConsultaEmpleado</servlet-name>
+		<servlet-class>org.igae.lab11.servlets.ServletConsultaEmpleado</servlet-class>
+	</servlet>
+		
+	<servlet>
+		<servlet-name>ServletConsultaPlantilla</servlet-name>
+		<servlet-class>org.igae.lab11.servlets.ServletConsultaPlantilla</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ServletConsultaEmpleado</servlet-name>
+		<url-pattern>/empleados</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ServletConsultaPlantilla</servlet-name>
+		<url-pattern>/plantilla</url-pattern>
+	</servlet-mapping>
+
+</web-app>
+

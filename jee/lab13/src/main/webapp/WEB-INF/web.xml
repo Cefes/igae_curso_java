@@ -1,0 +1,85 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+  <display-name>Archetype Created Web Application</display-name>
+
+	<filter>
+		<filter-name>FiltroAuditoria</filter-name>
+		<filter-class>org.igae.lab13.filters.AuditoriaFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>FiltroAuditoria</filter-name>
+		<url-pattern>*.accion</url-pattern>
+	</filter-mapping>
+	
+	<!-- 
+	
+	<filter>
+		<filter-name>FiltroSeguridad</filter-name>
+		<filter-class>es.tai.filters.SeguridadFilter</filter-class>
+	</filter>
+		
+	<filter-mapping>
+		<filter-name>FiltroSeguridad</filter-name>
+		<url-pattern>*.accion</url-pattern>
+	</filter-mapping>
+	
+	 -->
+	
+
+ <servlet>
+    <servlet-name>ServletConsultaEmpleadosHTML</servlet-name>  
+    <servlet-class>org.igae.lab13.servlets.ServletConsultaEmpleadosHTML</servlet-class>
+ </servlet>
+
+<servlet>
+    <servlet-name>ServletEntradaDatosBasicos</servlet-name>  
+    <servlet-class>org.igae.lab13.servlets.ServletEntradaDatosBasicos</servlet-class>
+ </servlet>
+
+<servlet>
+    <servlet-name>ServletEntradaDatosPuestoTrabajo</servlet-name>  
+    <servlet-class>org.igae.lab13.servlets.ServletEntradaDatosPuestoTrabajo</servlet-class>
+ </servlet>
+
+<servlet>
+    <servlet-name>ServletEntradaDatosEconomicos</servlet-name>  
+    <servlet-class>org.igae.lab13.servlets.ServletEntradaDatosEconomicos</servlet-class>
+ </servlet>
+
+<servlet>
+    <servlet-name>ServletConfirmacionAltaEmpleado</servlet-name>  
+    <servlet-class>org.igae.lab13.servlets.ServletConfirmacionAltaEmpleado</servlet-class>
+ </servlet>
+  
+ 
+ <servlet-mapping>
+    <servlet-name>ServletConsultaEmpleadosHTML</servlet-name>  
+    <url-pattern>/listaEmpleados.accion</url-pattern> 
+</servlet-mapping>
+
+ <servlet-mapping>
+    <servlet-name>ServletEntradaDatosBasicos</servlet-name>  
+    <url-pattern>/datosBasicos.accion</url-pattern> 
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>ServletEntradaDatosPuestoTrabajo</servlet-name>  
+    <url-pattern>/datosPuesto.accion</url-pattern> 
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>ServletEntradaDatosEconomicos</servlet-name>  
+    <url-pattern>/datosEconomicos.accion</url-pattern> 
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>ServletConfirmacionAltaEmpleado</servlet-name>  
+    <url-pattern>/confirmacionAlta.accion</url-pattern> 
+</servlet-mapping>
+	
+
+</web-app>
