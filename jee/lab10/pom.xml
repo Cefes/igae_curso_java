@@ -7,12 +7,17 @@
   <version>1.0.0</version>
   <dependencies>
 
-	<dependency>
-	    <groupId>javax</groupId>
-	    <artifactId>javaee-api</artifactId>
-	    <version>7.0</version>
-	    <scope>provided</scope>
-	</dependency>
+      <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+      <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>javax.servlet-api</artifactId>
+          <version>3.1.0</version>
+          <!-- Este artefacto le ponemos scope provided porque:
+           1.- Necesito que el compilador encuentre la clase javax.servlet.http.HttpServlet
+           2.- ...pero no necesito el artefactor para ejecutar porque ya lo tiene disponible el runtime jee / Tomcat
+       -->
+          <scope>provided</scope>
+      </dependency>
 
   </dependencies>
   <build>
@@ -27,6 +32,6 @@
                 </configuration>
             </plugin>
       </plugins>
-    <finalName>lab10</finalName>
+    <finalName>lab10</finalName> <!-- Esta etiqueta sirve para proporcionar el nombre del war -->
   </build>
 </project>

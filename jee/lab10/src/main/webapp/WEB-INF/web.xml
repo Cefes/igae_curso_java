@@ -12,6 +12,8 @@
   		<description>ruta donde almacenar las plantillas para los PDF</description>
   	</context-param>
 
+	<!-- Servlets -->
+
 	<servlet>
 		<servlet-name>ServletChequeoHttp</servlet-name>
 		<servlet-class>org.igae.lab10.ServletChequeoHttp</servlet-class>
@@ -31,6 +33,18 @@
 		<servlet-name>ServletCalculadora</servlet-name>
 		<servlet-class>org.igae.lab10.ServletCalculadora</servlet-class>
 	</servlet>
+
+	<servlet>
+		<servlet-name>ServletDePrueba</servlet-name>
+		<servlet-class>org.igae.lab10.ServletDePrueba</servlet-class>
+	</servlet>
+
+	<!-- Mapeos -->
+	<servlet-mapping>
+		<servlet-name>ServletDePrueba</servlet-name>
+		<url-pattern>/inicio</url-pattern>
+	</servlet-mapping>
+
 
 	<servlet-mapping>
 		<servlet-name>ServletCalculadora</servlet-name>
