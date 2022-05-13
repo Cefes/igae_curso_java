@@ -12,7 +12,7 @@ import org.igae.lab14.model.Book;
 
 
 @Path("books")
-public class BookRepository {
+public class BookResource {
 
 	@GET
 	@Path("/")

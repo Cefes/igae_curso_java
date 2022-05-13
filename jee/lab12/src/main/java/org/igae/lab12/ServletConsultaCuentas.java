@@ -20,6 +20,8 @@ public class ServletConsultaCuentas extends HttpServlet {
 		out.print("<h1> Datos de las cuentas</h1>");
 		out.print("<h3> CCC ES44-3332-21-3456742334 --> 10.000 euros </h3>");
 		out.print("<h3> CCC ES22-5621-67-7433742311 --> 130.000 euros </h3>");
+		out.print("<p>" + request.isUserInRole("Administrador") + "</p>");
+		out.print("<p>" + request.getUserPrincipal().getName() + "</p>");
         out.println("</table>");
         out.println("</body></html>");
 	}

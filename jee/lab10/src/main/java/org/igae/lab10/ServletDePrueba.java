@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-// NOTA: Aunque el web container cree multiples hilos de ejecucion solo se crea un instancia de esta clase
+// NOTA: Aunque el web container cree multiples hilos de ejecucion solo se crea una instancia de esta clase
+// NOTA: Aunque tu codificas los metodos doGet(), doPost(),...el web container siempre llama a service(req,res)
 
 public class ServletDePrueba extends HttpServlet {
     // Para poder invocar a este servlet el cliente necesitara realizar un request HTTP con esta url
@@ -27,14 +28,19 @@ public class ServletDePrueba extends HttpServlet {
         System.out.println("Llamando a init()");
     }
 
+    // protected solo permite visibilidad del metodo a las posibles clases hijas de esta
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // Siempre tenemos que tener en cuenta que este codigo lo están ejecutando multiples hilos-usuario
         PrintWriter salida = resp.getWriter();
         salida.println("Hola Mundo"); // Esto le llega al cliente web
         salida.println("Clase 'request' del fabricante/Tomcat que implementa HttpServletRequest: " + req.getClass().getName());
         Integer param = Integer.parseInt(req.getParameter("param"));
         salida.println("Param * 2 : " + param*2);
         salida.println("Lenguaje aceptado por el cliente web: " + req.getHeader("accept-language"));
+        salida.println("Hashcode del servlet: " + this.hashCode());
+        salida.println("Id del hilo actual: " + Thread.currentThread().getId());
+
         resp.addCookie(new Cookie("token","aada343dasda232=="));
         // Estos datos se guardan en un objeto (tipo tabla hash - clave/valor) asociado al usuario que ha hecho esta
         // peticion.
