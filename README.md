@@ -42,3 +42,4 @@ ARQUITECTURA JEE
 
 * Sesion 6 (https://vimeo.com/708576548)
 * Sesion 7 (https://vimeo.com/709016815)
+* Sesion 8 (https://vimeo.com/709450323)
